@@ -23,7 +23,6 @@ function Home(){
     return (
         <div>
             {/* displaying items as cards ,means taking the movie data (like the poster, title, and release date) and visual-exploration organizing it into a self-contained, rectangular UI component that looks like a physical card. */}
-            <h1>Home</h1>
             {movies.map(movie => (
                <MovieCard key={movie.id} 
                           id={movie.id}
