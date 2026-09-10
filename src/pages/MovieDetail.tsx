@@ -31,9 +31,9 @@ function MovieDetails(){
     if (!movieDatas) return <p>Loading..</p>
         
     return (
-        <div>
+        <div className="bg-gray-900 text-white min-h-screen">
             <h2>Movie ID: {id}</h2>
-            <img src={`https://image.tmdb.org/t/p/w500${movieDatas.backdrop_path}`}></img>
+            <img src={`https://image.tmdb.org/t/p/w500${movieDatas.backdrop_path}`} className="w-full rounded"></img>
             <h1>{movieDatas.title}</h1>
             <p>{movieDatas.overview}</p>
             <p>{movieDatas.release_date}</p>

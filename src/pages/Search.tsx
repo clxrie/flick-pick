@@ -25,7 +25,7 @@ function Search(){
 
 
     return (
-    <div className="search-movie">
+    <div className="bg-gray-900 text-white min-h-screen">
         <input type="text"
                placeholder="🔍 Search movie..."
                value={searchInput}

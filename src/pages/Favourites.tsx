@@ -21,7 +21,7 @@ function Favourites(){
         <div>
             <h1> favs</h1>
             {favorites.map((favorite: any) => (
-                <div>
+                <div className="bg-gray-900 text-white min-h-screen">
                     <p key = {favorite.id}>{favorite.title}</p>
                     <img src={`https://image.tmdb.org/t/p/w500${favorite.backdrop_path}`}></img>
                     <h1>{favorite.title}</h1>

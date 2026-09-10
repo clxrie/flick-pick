@@ -4,7 +4,7 @@ function MovieCard({ title, poster_path, vote_average, id }: { title: string, po
     return (
             <Link to={`/movie/${id}`}>
                 <div className="movie-poster">
-                    <img src={`https://image.tmdb.org/t/p/w500${poster_path}`}></img>
+                    <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} className="w-full rounded"></img>
                     <h2>{title}</h2>
                     <p>Rating : ⭐ {vote_average}</p>
                 </div>
