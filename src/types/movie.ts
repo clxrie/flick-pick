@@ -8,3 +8,4 @@ export type Movie = {
   release_date: string,
   genre_ids: number[],
 }
+
