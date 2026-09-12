@@ -20,14 +20,16 @@ function MovieDetails(){
     }, [id]);
 
     function addtoFav(){
-        const saved = localStorage.getItem("favs");
-        const currentFavs = saved ? JSON.parse(saved) : [];
-        //I dont want the movie to be saved more than once so, 
+    if (!movieDatas) return;
+     //I dont want the movie to be saved more than once so, 
         //.some() or .find() — they look through an array and check a condition on each item.
-        if (currentFavs.some((fav: Movie) => fav.id === movieDatas.id)) return;
-        currentFavs.push(movieDatas);
-        localStorage.setItem("favs", JSON.stringify(currentFavs));
-    }
+    const saved = localStorage.getItem("favs");
+    const currentFavs = saved ? JSON.parse(saved) : [];
+    if (currentFavs.some((fav: Movie) => fav.id === movieDatas.id)) return;
+    currentFavs.push(movieDatas);
+    localStorage.setItem("favs", JSON.stringify(currentFavs));
+}
+    
     if (!movieDatas) return <p>Loading..</p>
         
     return (
