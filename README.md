@@ -1,75 +1,43 @@
-# React + TypeScript + Vite
+# FlickPick 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie explorer app that fetches, organizes, and displays movies from The Movie Database API.
 
-Currently, two official plugins are available:
+## Live Demo
+[flick-pick-neon.vercel.app](https://flick-pick-neon.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Screenshots
+![Home Page](https://github.com/user-attachments/assets/c5ebc935-f66c-4d53-ab11-623f973a4fc8)
+![Search](https://github.com/user-attachments/assets/59e788bf-e03b-45d9-a397-96cb8a10b288)
+![Movie Detail](https://github.com/user-attachments/assets/a2dd27d6-62ab-4d54-9ccf-03f16980987e)
+![Favourites](https://github.com/user-attachments/assets/4926f1d0-6567-43ee-9924-5e36eaa31e66)
 
-## React Compiler
+## Built With
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+- TMDB API
+- Vite
+- Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+- Flickpick can show the trending movies
+- Can search for any type of movie
+- Can add to your favourites and remove from it
+- Get detailed overview of movie with the ratings and how many people rated them
+- 
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+## Run Locally
+```bash
+git clone https://github.com/clxrie/flick-pick.git
+cd flick-pick
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+## What I Learned
+- First time used React with React-router and learned how to apply them.
+- First time using so many components, so I learned how to manage each component and get in depth knowledge of props 
+- It was my first using tailwind, and as much as it was confusing, it was an easy option than CSS.
+- The hardest part in which I still get confused is to use useEffect.
+- After applying so many hooks, I am pretty confident in using react-hooks and how to make code smaller and more understandable.
