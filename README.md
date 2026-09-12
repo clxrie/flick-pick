@@ -36,7 +36,7 @@ npm run dev
 ```
 
 ## What I Learned
-- First time used React with React-router and learned how to apply them.
+- Second time using React-router and got a better understanding on how to use it.
 - First time using so many components, so I learned how to manage each component and get in depth knowledge of props 
 - It was my first using tailwind, and as much as it was confusing, it was an easy option than CSS.
 - The hardest part in which I still get confused is to use useEffect.
