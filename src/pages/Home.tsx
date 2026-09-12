@@ -21,14 +21,15 @@ function Home(){
     }, [])
     
     return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 font-serif">
+        <div className="bg-black grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
             {/* displaying items as cards ,means taking the movie data (like the poster, title, and release date) and visual-exploration organizing it into a self-contained, rectangular UI component that looks like a physical card. */}
             {movies.map(movie => (
                <MovieCard key={movie.id} 
                           id={movie.id}
                           title={movie.title}
                           poster_path={movie.poster_path}
-                          vote_average={movie.vote_average} />
+                          vote_average={movie.vote_average}
+                          vote_count = {movie.vote_count} />
             ))}
 
         </div>

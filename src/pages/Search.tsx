@@ -25,21 +25,31 @@ function Search(){
 
 
     return (
-    <div className="bg-gray-900 text-white min-h-screen">
-        <input type="text"
+    <div className="bg-gray-900 text-white min-h-screen ">
+        <input className="bg-gray-800 text-white mt-4 px-5 py-2 rounded w-64"
+               type="text"
                placeholder="🔍 Search movie..."
                value={searchInput}
                onChange={inputSearch}/>
-        <button onClick={searchButton}>search</button>
+        <button className="bg-white text-black mt-4 px-4 py-2 rounded ml-2"
+                onClick={searchButton}>
+                        Search
+        </button>
+        {results.length === 0 && (
+  <p className="text-gray-500 text-center mt-10">Search for a movie to get started</p>
+)}
 
-        {results.map(result => (
-            <MovieCard key={result.id} 
-                          id={result.id}
-                          title={result.title}
-                          poster_path={result.poster_path}
-                          vote_average={result.vote_average} />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+            {results.map(result => (
+                <MovieCard key={result.id} 
+                           id={result.id}
+                           title={result.title}
+                           poster_path={result.poster_path}
+                           vote_average={result.vote_average} 
+                           vote_count={result.vote_count}/>
+                           
         ))}
-
+    </div>
     </div>
     )
 }
